@@ -1,0 +1,26 @@
+#might want to remove these in some cases
+*.html
+*.pdf
+_*
+
+
+*.tmp
+*.tex
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents:
+*.dvi
+*.xdv
+*-converted-to.*
+
