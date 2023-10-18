@@ -1,5 +1,6 @@
-export NAME=test
+export NAME=$(shell (ls test.md||(ls *.md|head -n 1;);)|cut -d '.' -f 1)
 default:
+	echo make ${NAME}
 	make all
 clean:
 	#rm *.tex 2> /dev/null || echo "."
