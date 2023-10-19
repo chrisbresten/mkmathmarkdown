@@ -25,12 +25,13 @@ block math:
 
 $$
 \prod\limits_{i=0}^{N}(x-i)
+b_3
 $$
 
-more inline math \\( \pi^3 \\)
+more inline math \( \pi^3 \) and \( b_3 \) and $c_3$
 
 block math 
 
-\\[
-\int\Pi
-\\]
+\[
+\int\Pi b_3
+\]

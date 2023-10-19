@@ -18,7 +18,7 @@ class MathJaxRenderer(HtmlRenderer, LaTeXRenderer):
 
     def render_math(self, token):
         """
-            Mathjax doesnt support single dollar signs by default but we do
+            Mathjax doesnt support single dollar signs by default but we do by converting to \(\) inline math delim
         """
         if token.content.startswith('$$') or token.content.startswith('\\[') or token.content.startswith('\\('):
             return self.render_raw_text(token)

@@ -1,8 +1,12 @@
 #!/bin/bash
 export MNAME=`echo $1|cut  -f 1 -d .`
 export TITLE=`echo $MNAME|sed 's/_/ /g'`
-export _F=$1
-ls $_F||(echo "no file $_F" ;exit 0)
+ls $1||(echo "no file $1" ;exit 0)
+cp -f $1 $MNAME.tmp&&export _F=$MNAME.tmp
+sed -i 's/\\(/$/g' $_F
+sed -i 's/\\)/ $/g' $_F #this is a mathjax thing \( \)and it isnt  handled by mistletoe latex right
+sed -i 's/\\\]/ \\\\]/' $_F
+sed -i 's/\\\[/\\\\[/' $_F
 
 mkhtml() {
     echo "<head><html><title> $TITLE </title></head>" > $MNAME.html
