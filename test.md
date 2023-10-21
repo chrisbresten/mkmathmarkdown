@@ -17,7 +17,9 @@ print('hi')
 
 bleh meh $\sum\limits_{i=1}^{N} x^3 $
 
+write dollar sign by ``\$`` \$
 
+write math parenthese by surrounding in backquotes ``\)`` ``\[`` ``\]`` ``\(``
 
 
 
