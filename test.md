@@ -9,11 +9,15 @@
 #### Example
 
 
-[https://github.com/link](link)
+[link](https://github.com/link)
 ```python
 print('hi')
 ```
-
+```solidity
+interface IERC20WithBurn is IERC20Metadata {
+  function burn(uint256 amount) external;
+}
+```
 
 bleh meh $\sum\limits_{i=1}^{N} x^3 $
 
