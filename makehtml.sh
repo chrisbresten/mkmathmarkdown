@@ -30,9 +30,8 @@ ls $1||(echo "no file $1" ;exit 0)
 cp -f $1 $MNAME.tmp&&export _F=$MNAME.tmp
 sed -i '/``\\(``/! s/\\(/$/g ' $_F
 sed -i '/``\\)``/! s/\\)/$/g' $_F #this is a mathjax thing \( \)and it isnt  handled by mistletoe latex right
-sed -i '/``\\\]``/!  s/\\\]/\\\\]/g' $_F
-sed -i '/``\\\[``/!  s/\\\[/\\\\[/g' $_F
-
+sed -i '/``\\\]``/!  s/\\\]/$$/g' $_F
+sed -i '/``\\\[``/!  s/\\\[/$$/g' $_F
 
 ( mkhtml $_F && echo "html g2g"; ) || echo html ded
 mkdvilatex $_F &&echo "pdf g2g"
