@@ -8,7 +8,7 @@ mkhtml() {
 
 mklatex() {
     mistletoe -r  mistletoe.latex_renderer.LaTeXRenderer $1 > $MNAME.tex
-    sed -i 's/solidity/java/i' $MNAME.tex #code highlighter doesnt know solidity
+    sed -i 's/language=solidity/language=java/i' $MNAME.tex #code highlighter doesnt know solidity
 }
 
 mkpdflatex() {
